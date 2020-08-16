@@ -1,4 +1,4 @@
-package io.github.lete114.tools;
+package top.lete114.tools;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -20,7 +20,7 @@ public class RGB {
         Rectangle rec = new Rectangle(0, 0, di.width, di.height);
         BufferedImage bi = rb.createScreenCapture(rec);
         int pixelColor = bi.getRGB(x, y);
-        Color color = new Color(16777216 + pixelColor);
+        Color color = new Color(pixelColor);
         return color.getRed(); // pixelColor的值为负，经过实践得出：加上颜色最大值就是实际颜色值。
     }
     public int green(int x, int y) throws AWTException { // 函数返回值为颜色的RGB值。
